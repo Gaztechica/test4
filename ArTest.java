@@ -8,17 +8,13 @@ public class ArTest {
     public class RegressTest {
 
 
-//        ========================= 22.02.24 =============================================
-
-//        ========== поменять почту? === ygor3@bk.ru ===============================
-
 
 
         @Test
         public void PassworTest () throws InterruptedException {
 
             WebDriver driver = new ChromeDriver();
-            driver.get("http://23.105.246.172:3000/login");
+            driver.get(URL);
 
             String titlel = driver.getTitle();
 
