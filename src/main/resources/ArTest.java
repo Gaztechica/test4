@@ -1,6 +1,5 @@
 
-
-import ar.runner.BaseTest;
+import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,7 +23,7 @@ public class ArTest extends BaseTest {
         ChromeDriver driver = new ChromeDriver();
 
         driver.get(URL);
-        Thread.sleep(1000);
+
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
         driver.findElement(By.xpath("//input[@id='RestorePassword_email']")).sendKeys(EMAIL);
@@ -47,13 +46,13 @@ public class ArTest extends BaseTest {
 
         WebDriver driver = new ChromeDriver();
         driver.get(URL);
-        Thread.sleep(1000);
+
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 
 
@@ -72,7 +71,7 @@ public class ArTest extends BaseTest {
         String getError = driver.findElement(getErrorText).getText();
 
         Assert.assertEquals(getError,"Неправильный логин или пароль");
-        driver.quit();
+//        driver.quit();
     }
 
     //      ======  добавить проверку проекта===
@@ -199,8 +198,8 @@ public class ArTest extends BaseTest {
         elemPage.click();
         Thread.sleep(3000);
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
-//        elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-//        elemPage.sendKeys(Keys.ENTER);
+        elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        elemPage.sendKeys(Keys.ENTER);
 
         Thread.sleep(1000);
 
@@ -255,7 +254,7 @@ public class ArTest extends BaseTest {
 //         WebElement submitButtonCreateProject = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']"));
 //
 //         submitButtonCreateProject.click();
-         driver.quit();
+//         driver.quit();
 //         Thread.sleep(5000);
     }
 
@@ -524,8 +523,8 @@ public class ArTest extends BaseTest {
         elemPage02.sendKeys("zxcvbnm123");
         elemPage02.click();
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
-        Thread.sleep(2000);
-//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
 //        WebElement userRen = driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']"));
 //
@@ -539,7 +538,7 @@ public class ArTest extends BaseTest {
 //
 //        userRen.click();
 
-
+        Thread.sleep(2000);
         driver.quit();
     }
 
@@ -643,7 +642,7 @@ public class ArTest extends BaseTest {
         elemPage02.click();
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
 
-//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
 //        WebElement userRen = driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']"));
 //
@@ -738,7 +737,7 @@ public class ArTest extends BaseTest {
 //        userRen.click();
 
         Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 
 
@@ -762,8 +761,6 @@ public class ArTest extends BaseTest {
         driver.findElement(By.xpath("//input[@id='InviteUserModal_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
 
         WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
-        Thread.sleep(2000);
-
         userRoles.click();
         userRoles.sendKeys(Keys.ENTER);
 
@@ -787,16 +784,14 @@ public class ArTest extends BaseTest {
         Thread.sleep(3000);
 //        не работает сортировка по организациям
         WebElement userRolesx = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-        Thread.sleep(2000);
 
         userRolesx.click();
-
-//        userRolesx.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-//        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
-//        userRoles.click();
-//        Thread.sleep(3000);
-//        userRoles.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-//        Thread.sleep(3000);
+        userRolesx.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
+        userRoles.click();
+        Thread.sleep(3000);
+        userRoles.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+        Thread.sleep(3000);
 //        userRoles.sendKeys(Keys.ARROW_DOWN);
 //        Thread.sleep(1000);
 //        userRoles.sendKeys(Keys.ENTER);
@@ -806,7 +801,7 @@ public class ArTest extends BaseTest {
 
 
 //        Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 
     @Test
@@ -831,7 +826,7 @@ public class ArTest extends BaseTest {
         userRoles.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
 
         Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 
     @Test
@@ -862,7 +857,7 @@ public class ArTest extends BaseTest {
 
 
         Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 
     @Test
@@ -893,7 +888,7 @@ public class ArTest extends BaseTest {
 
 
 //        Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 
     @Test
@@ -1029,12 +1024,12 @@ public class ArTest extends BaseTest {
 //        WebElement userRoles = driver.findElement(By.xpath("//*[@id=\"root\"]/section/main/div/div/div[1]/div[1]/div[1]/div/div/span[2]"));
 //        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
         userRoles.click();
-        Thread.sleep(3000);
-//        userRoles.sendKeys(Keys.ARROW_DOWN);
-//        userRoles.sendKeys(Keys.ARROW_DOWN);
-//        userRoles.sendKeys(Keys.ENTER);
-//        userRoles.sendKeys(Keys.ARROW_DOWN);
-//        userRoles.sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+        userRoles.sendKeys(Keys.ARROW_DOWN);
+        userRoles.sendKeys(Keys.ARROW_DOWN);
+        userRoles.sendKeys(Keys.ENTER);
+        userRoles.sendKeys(Keys.ARROW_DOWN);
+        userRoles.sendKeys(Keys.ENTER);
 //        WebElement userRolesc = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
 //        userRolesc.click();
 
