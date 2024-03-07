@@ -14,6 +14,7 @@ public class ArTest extends BaseTest {
     private By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
     private By getText = By.xpath("//input[@id='EditProjectForm_name'][@value='1Новый проект']");
 
+    ChromeDriver driver = new ChromeDriver();
     @BeforeMethod
     @AfterMethod
 
@@ -21,7 +22,7 @@ public class ArTest extends BaseTest {
     @Test
     public void PassworTest () throws InterruptedException {
 
-        ChromeDriver driver = new ChromeDriver();
+
 
         driver.get(URL);
         Thread.sleep(1000);
