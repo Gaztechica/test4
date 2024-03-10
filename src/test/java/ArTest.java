@@ -23,7 +23,6 @@ public class ArTest extends BaseTest {
     public void PassworTest () throws InterruptedException {
 
 
-
         driver.get(URL);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
@@ -38,15 +37,13 @@ public class ArTest extends BaseTest {
 
 
 
-
     //=============================== регистрация нового пользователя ====================================
 
 
-    // найти рамдомные почтовые ящ и создавать/удалять пользователей?
+    // рамдомные почтовые ящ и создавать/удалять пользователей?
     @Test
     public void AutorisationTest () throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
         driver.get(URL);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
