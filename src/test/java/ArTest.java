@@ -31,7 +31,7 @@ public class ArTest extends BaseTest {
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']")).click();
 
-        driver.quit();
+//        driver.quit();
 
     }
 
