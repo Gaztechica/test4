@@ -24,14 +24,14 @@ public class ArTest extends BaseTest {
 
 
         driver.get(URL);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
         driver.findElement(By.xpath("//input[@id='RestorePassword_email']")).sendKeys(EMAIL);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']")).click();
 
-//        driver.quit();
+        driver.quit();
 
     }
 
