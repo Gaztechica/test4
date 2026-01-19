@@ -1,6 +1,6 @@
 
 
-import ar.runner.BaseTest;
+import AutoTest.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
