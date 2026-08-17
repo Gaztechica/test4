@@ -1,5 +1,3 @@
-
-
 import AutoTest.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
