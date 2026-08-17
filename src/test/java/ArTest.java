@@ -45,7 +45,7 @@ public class ArTest extends BaseTest {
     public void AutorisationTest () throws InterruptedException {
 
         driver.get(URL);
-        Thread.sleep(1000);
+        Thread.sleep(500);
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
